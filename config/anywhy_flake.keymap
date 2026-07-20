@@ -3,21 +3,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    chosen {
-        zmk,physical-layout = &medium_layout;
-    };
+    chosen { zmk,physical-layout = &medium_layout; };
 
     combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
+        layer_5 {
+            bindings = <
+&trans     &trans     &trans     &trans    &trans    &trans      &kp J    &kp L      &kp U      &kp Y     &kp SEMI  &trans
+&trans     &kp Q      &kp W      &kp F     &kp P     &kp B       &kp J    &kp L      &kp U      &kp Y     &kp SEMI  &kp MINUS
+&trans     &kp A      &kp R      &kp S     &kp T     &kp G       &kp M    &kp N      &kp E      &kp I     &kp O     &kp SQT
+&kp LSHFT  &kp Z      &kp X      &kp C     &kp D     &kp V       &kp K    &kp H      &kp COMMA  &kp DOT   &kp FSLH  &kp LSHFT
+           &kp LSHFT  &kp LCTRL  &kp LALT  &kp BSPC  &kp LGUI    &kp RET  &kp SPACE  &kp LCTRL  &kp RALT  &trans
+            >;
+        };
+
         base {
             bindings = <
-&mo 3           &kp Q  &kp W             &kp F         &kp P          &kp B                  &kp J        &kp L      &kp U      &kp Y              &kp SEMICOLON  &kp MINUS
-&mo 2           &kp A  &kp R             &kp S         &kp T          &kp G                  &kp M        &kp N      &kp E      &kp I              &kp O          &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X             &kp C         &kp D          &kp V                  &kp K        &kp H      &kp COMMA  &kp PERIOD         &kp SLASH      &kp RIGHT_SHIFT
-                &none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp BACKSPACE  &mt LEFT_GUI ESCAPE    &lt 1 ENTER  &kp SPACE  &kp M      &kp RIGHT_CONTROL  &kp RIGHT_ALT
+&mo 4           &kp Q             &kp W         &kp F          &kp P                &kp B          &kp J      &kp L  &kp U              &kp Y          &kp SEMICOLON  &kp MINUS
+&mo 3           &kp A             &kp R         &kp S          &kp T                &kp G          &kp M      &kp N  &kp E              &kp I          &kp O          &kp SQT
+&kp LEFT_SHIFT  &kp Z             &kp X         &kp C          &kp D                &kp V          &kp K      &kp H  &kp COMMA          &kp PERIOD     &kp SLASH      &kp RIGHT_SHIFT
+&none           &kp LEFT_CONTROL  &kp LEFT_ALT  &kp BACKSPACE  &mt LEFT_GUI ESCAPE  &lt 2 ENTER    &kp SPACE  &kp M  &kp RIGHT_CONTROL  &kp RIGHT_ALT
             >;
         };
 
@@ -26,7 +34,7 @@
 &trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
 &trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans        &trans        &trans        &trans  &trans
 &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans    &trans  &trans        &trans        &trans        &trans  &trans
-        &trans  &trans  &trans                &trans                 &trans    &trans  &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans                &trans                 &trans    &trans  &trans        &trans        &trans
             >;
         };
 
@@ -35,16 +43,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp END   &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans          &trans           &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans          &trans          &trans
             >;
         };
 
         system {
             bindings = <
-&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR      &trans        &trans        &trans        &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                &trans        &trans        &trans        &studio_unlock  &soft_off       &trans  &trans  &trans  &trans  &trans
+&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR      &trans        &trans        &trans          &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans        &trans        &trans          &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &studio_unlock  &soft_off     &trans          &trans  &trans  &trans  &trans
             >;
         };
 
@@ -53,7 +61,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
