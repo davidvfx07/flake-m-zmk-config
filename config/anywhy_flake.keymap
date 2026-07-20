@@ -12,11 +12,11 @@
 
         layer_5 {
             bindings = <
-&trans     &kp Q      &kp W      &kp F     &kp P     &kp B       &kp J    &kp L      &kp U      &kp Y     &kp SEMI  &kp MINUS
-&trans     &kp A      &kp R      &kp S     &kp T     &kp G       &kp M    &kp N      &kp E      &kp I     &kp O     &kp SQT
-&trans     &kp Z      &kp X      &kp C     &kp D     &kp V       &kp K    &kp H      &kp COMMA  &kp DOT   &kp FSLH  &kp LSHFT
-&kp LSHFT  &kp Z      &kp X      &kp C     &kp D     &kp V       &kp K    &kp H      &kp COMMA  &kp DOT   &kp FSLH  &kp LSHFT
-           &kp LSHFT  &kp LCTRL  &kp LALT  &kp BSPC  &kp LGUI    &kp RET  &kp SPACE  &kp LCTRL  &kp RALT  &trans
+&studio_unlock  &kp Q      &kp W      &kp F     &kp P     &kp B       &kp J    &kp L      &kp U      &kp Y     &kp SEMI  &kp MINUS
+&studio_unlock  &kp A      &kp R      &kp S     &kp T     &kp G       &kp M    &kp N      &kp E      &kp I     &kp O     &kp SQT
+&trans          &kp Z      &kp X      &kp C     &kp D     &kp V       &kp K    &kp H      &kp COMMA  &kp DOT   &kp FSLH  &kp LSHFT
+&kp LSHFT       &kp Z      &kp X      &kp C     &kp D     &kp V       &kp K    &kp H      &kp COMMA  &kp DOT   &kp FSLH  &kp LSHFT
+                &kp LSHFT  &kp LCTRL  &kp LALT  &kp BSPC  &kp LGUI    &kp RET  &kp SPACE  &kp LCTRL  &kp RALT  &trans
             >;
         };
 
