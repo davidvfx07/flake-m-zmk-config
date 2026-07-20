@@ -5,6 +5,10 @@
 / {
     combos { compatible = "zmk,combos"; };
 
+    chosen {
+        zmk,physical-layout = &medium_layout;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
